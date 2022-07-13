@@ -3,7 +3,7 @@ margin: 0;
 box-sizing: border-box;
 }
 
-body {
+.body {
 font-family: sans-serif;
 padding: 200px 20px 0;
 }
@@ -57,4 +57,27 @@ font-size: 30px;
 font-weight: bold;
 padding: 0 40px;
 line-height: 80px;
+}
+
+.footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    
+}
+
+.contenido{
+    background-color:wheat;   
+    top: 80px;
+    bottom: 20px;
+    position: fixed;
+    width: 100%;
+    overflow: auto;
+    
 }
