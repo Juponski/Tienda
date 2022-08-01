@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://thymeleaf.org/extras/spring-security">
+    <head th:replace="layout/plantilla :: head">
+        <title>TechShop</title>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"/>
+
+        <div class="contenido">
+            <h2 style="text-align: center">[[#{login.login}]]</h2>
+            <form method="post" th:action="@{/login}">
+                <label for="username">[[#{login.username}]]</label>
+                <input type="text" name="username" id="username"/>
+                <br/>
+                <br/>
+                <label for="password">[[#{login.password}]]</label>
+                <input type="password" name="password" id="password"/>
+                <br/>
+                <br/>
+                <button type="submit" value="Login">[[#{login.login}]]</button>
+            </form>            
+        </div>
+        <footer th:replace="layout/plantilla :: footer"/>
+    </body>
+</html>

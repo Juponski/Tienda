@@ -1,4 +1,3 @@
-
 package com.tienda.controller;
 
 
@@ -10,25 +9,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
-
-
+@Controller
 @Slf4j
-
-@Controller 
 public class IndexController {
+
     @Autowired
     private ArticuloService articuloService;
-    
+
     @GetMapping("/")
-    public String inicio(Model model){
-       
-        log.info("Estamos del lado de programacion");
-        
-        var articulos = articuloService.getArticulos(true);
-        
-        model.addAttribute("articulos",articulos);
+    public String inicio(Model model) {
+        var articulos = articuloService.getArticulos();
+        model.addAttribute("articulos", articulos);
         return "index";
     }
-    
-    
+
+
 }

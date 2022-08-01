@@ -1,45 +1,35 @@
 <!DOCTYPE html>
-<!--
-Esta es nuestra primer pagina HTML
--->
-<html xlmns="http://www.gersonicshop.org/1999/xhtml">
+<!--  Esta es nuestra primera página web del curso  -->
+<html lang="es">
     <head>
-        <title>TIENDA GERSONIC TECH</title>
-        <meta charset="UTF-8"/>
-        <link href="ccs/estilos.css" rel="stylesheet" type="text/css"/>
-
+        <title>TechShop</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Página principal de la tienda TechShop">
+        <meta name="keywords" content="html5, css, TechShop">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
-        <header><h1 id="estilo1"> INTRODUCCION A HTML</h1></header>
-
+    <body> 
+        <header>
+            <h1 id="encabezado">TechShop</h1>
+        </header>
         <nav>
-            <a href="index_1.html" target="_blank">INDEX</a>
-            <a href="ejemplo2.html" target="_blank">NEXT</a>
-            <a href="audios.html"target="_blank"> AUDIOS</a>
-        </nav>
-
-        <aside>
-            <h2>PRACTICA AUDIOS Y VIDEOS</h2>
-            <p class = 'prueba' >Lechuga</p>
-        </aside>
-        <hr/>
-
+            <a href="ejemplo6.html">Back</a> | <a href="index.html">Home</a> | <a href="ejemplo2.html">Next</a>
+        </nav>        
         <section>
-            <h2>EJEMPLO DE VIDEOS</h2>
+            <h2>Películas</h2>
             <article>
-                <header><h3>Torpedos</h3></header>               
-                <figure>                   
-                    <video width="320" height="240" controls autoplay muted>
-                        <source src="torpedo.mp4" type="video/mp4">
-                       Su explorador no soporta el formato de video <code>video</code> 
+                <header><h3>Torpedo</h3></header>
+                <figure>
+                    <video width="320" height="240" controls poster="images/torpedo.jpg">
+                        <source src="videos/torpedo.mp4" type="video/mp4">
+                        Su navegador no soporta <code>video</code>.
                     </video>
-                    <figcaption>REALIZADA EN 2021</figcaption>
+                    <figcaption>Realizada en 2021</figcaption>
                 </figure>
             </article>
         </section>
         <footer>
-            DERECHOS RESERVADOS <address>Tel: 1111:1111</address>
+            Sitio desarrollado <span>en el curso Web</span> y Patrones 2022 &COPY; 
         </footer>
-
     </body>
 </html>

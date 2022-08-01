@@ -1,32 +1,28 @@
-
 package com.tienda.domain;
 
 import java.io.Serializable;
 import javax.persistence.*;
 import lombok.Data;
 
-
 @Data
 @Entity
-@Table(name="credito")
-
+@Table(name = "credito")
 public class Credito implements Serializable {
-    
+
     private static final long serialVersionUID = 1l;
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id_credito")
-    
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name= "id_credito")
     private Long idCredito;
-    private Long limite;
+    
+    private double limite;
+
 
     public Credito() {
     }
 
-    public Credito(Long limite) {
+    public Credito(double limite) {
         this.limite = limite;
     }
-
-      
-    
 }

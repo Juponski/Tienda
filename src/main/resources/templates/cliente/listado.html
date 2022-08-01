@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-    <head>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://thymeleaf.org/extras/spring-security">
+    <head th:replace="layout/plantilla :: head">
         <title>TechShop</title>
         <meta charset="UTF-8"/>
-        <link href="/ccs/menu.css" rel="stylesheet" type="text/css"/>
-
+        <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
-        <div class ="contenido ">
 
+        <div class="contenido">
             <h2>Listado de Clientes</h2>
-            <a th:href="@{/cliente/nuevo}">Nuevo Cliente</a>
-            <a th:href="@{/cliente/buscarApellido}">Buscar Cliente</a>
-            <div th:if="${clientes != null and !clientes.empty}">
 
+            <a th:href="@{/cliente/nuevo}">Nuevo Cliente</a>
+            <a th:href="@{/cliente/busqueda}">Buscar por apellidos</a>
+            <div th:if="${clientes != null and !clientes.empty}">
                 <table border="1">
                     <thead>
                         <tr>
                             <th>Nombre</th>
                             <th>Apellidos</th>
                             <th>Correo</th>
-                            <th>Telefono</th>
-                            <th>Limite</th>
+                            <th>Teléfono</th>
+                            <th>Límite</th>
                             <th>Eliminar</th>
                             <th>Modificar</th>
                         </tr>
@@ -33,19 +34,17 @@
                             <td th:text="${cliente.apellidos}"></td>
                             <td th:text="${cliente.correo}"></td>
                             <td th:text="${cliente.telefono}"></td>
-                            <td th:text="${#numbers.formatDecimal(cliente.credito.limite,3,2)}"style="text-align: right"></td>
+                            <td th:text="${#numbers.formatDecimal(cliente.credito.limite,3,2)}" style="text-align: right"></td>
                             <td><a th:href="@{/cliente/eliminar/} + ${cliente.idCliente}">Eliminar</a></td>
                             <td><a th:href="@{/cliente/modificar/} + ${cliente.idCliente}">Modificar</a></td>
-
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div th:if="${clientes == null or clientes.empty}">
-                No tenemos lista de clientes que mostrar
+                <h3>No tenemos clientes que mostrar...</h3>
             </div>
         </div>
-
         <footer th:replace="layout/plantilla :: footer"/>
     </body>
 </html>

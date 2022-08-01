@@ -9,55 +9,29 @@ import org.thymeleaf.templatemode.TemplateMode;
 public class TemplateResolverConfiguration {
     
     @Bean
-    public SpringResourceTemplateResolver templatesResolver_0() {
-        
-        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-        templateResolver.setPrefix("classpath:/templates");
-        templateResolver.setSuffix(" .html");
-        templateResolver.setTemplateMode(TemplateMode.HTML);
-        templateResolver.setCharacterEncoding("UTF-8");
-        templateResolver.setOrder(0);
-        templateResolver.setCheckExistence(true);
-        return templateResolver;
+    public SpringResourceTemplateResolver templateResolve_0() {
+        SpringResourceTemplateResolver resolver = 
+                new SpringResourceTemplateResolver();
+        resolver.setPrefix("classpath:templates");
+        resolver.setSuffix(".html");
+        resolver.setTemplateMode(TemplateMode.HTML);
+        resolver.setCharacterEncoding("UTF-8");
+        resolver.setOrder(0);
+        resolver.setCheckExistence(true);
+        return resolver;
     }
     
     @Bean
-    public SpringResourceTemplateResolver templatesResolver_1() {
-        
-        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-        templateResolver.setPrefix("templates/categoria");
-        templateResolver.setSuffix(" .html");
-        templateResolver.setTemplateMode(TemplateMode.HTML);
-        templateResolver.setCharacterEncoding("UTF-8");
-        templateResolver.setOrder(1);
-        templateResolver.setCheckExistence(true);
-        return templateResolver;
-    }
-    
-    @Bean
-    public SpringResourceTemplateResolver templatesResolver_2() {
-        
-        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-        templateResolver.setPrefix("templates/articulo");
-        templateResolver.setSuffix(" .html");
-        templateResolver.setTemplateMode(TemplateMode.HTML);
-        templateResolver.setCharacterEncoding("UTF-8");
-        templateResolver.setOrder(2);
-        templateResolver.setCheckExistence(true);
-        return templateResolver;
-    }
-    
-    @Bean
-    public SpringResourceTemplateResolver templatesResolver_3() {
-        
-        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-        templateResolver.setPrefix("templates/cliente");
-        templateResolver.setSuffix(" .html");
-        templateResolver.setTemplateMode(TemplateMode.HTML);
-        templateResolver.setCharacterEncoding("UTF-8");
-        templateResolver.setOrder(3);
-        templateResolver.setCheckExistence(true);
-        return templateResolver;
+    public SpringResourceTemplateResolver templateResolve_1() {
+        SpringResourceTemplateResolver resolver = 
+                new SpringResourceTemplateResolver();
+        resolver.setPrefix("templates/cliente/");
+        resolver.setSuffix(".html");
+        resolver.setTemplateMode(TemplateMode.HTML);
+        resolver.setCharacterEncoding("UTF-8");
+        resolver.setOrder(1);
+        resolver.setCheckExistence(true);
+        return resolver;
     }
     
 }
